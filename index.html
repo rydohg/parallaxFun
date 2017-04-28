@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://rawgit.com/pixelcog/parallax.js/master/parallax.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .parallax-window {
+            background: transparent;
+        }
+        .side-note {
+            width: 15%;
+            padding: 16px;
+            color: #ffffff;
+            margin-left: 70%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .side-note-wrapper {
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    </style>
+    <title>Home Makeover</title>
+</head>
+<body>
+    <div class="parallax-window blue" data-parallax="scroll" data-speed="0.000001" data-image-src="chiron.jpg" data-natural-width="1400">
+        <div class="side-note-wrapper">
+            <div class="side-note" data-aos="fade-left">
+                <h2>Hello</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-window red" data-parallax="scroll" data-speed="0.000001" data-image-src="chironRed.jpg" data-natural-width="1400">
+        <div class="side-note-wrapper">
+            <div class="side-note" data-aos="fade-left">
+                <h2>Hello Again</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        AOS.init();
+        $('.parallax-window').height($(window).height());
+        $('.blue').parallax({imageSrc: 'chiron.jpg'});
+        $('.red').parallax({imageSrc: 'chironRed.jpg'});
+    </script>
+</body>
+</html>
